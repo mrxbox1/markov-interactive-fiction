@@ -19,11 +19,11 @@ func build_model(source):
 		if source[i] != source[-1]:
 			next_word = source[i + 1]
 		else:
-			next_word = "..."
+			next_word = ""
 		#print("Next word:", next_word)
 		model[source[i]].append(next_word)
 
-	model["..."] = ["..."]
+	model[""] = [""]
 
 	return model
 
