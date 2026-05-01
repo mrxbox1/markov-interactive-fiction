@@ -1,32 +1,55 @@
 extends RichTextLabel
 
+
+
 var text_string = FileAccess.get_file_as_string("texts/sample.txt")
-var text_markovified = {}
 
 
 
-func markovify_text(input_text):
-	var text_split = input_text.replace(" ", "|").replace("\n", "|")
-	text_split = input_text.split("|")
+func build_model(source):
+	source = source.split(" ")
+	var model = {}
+	var next_word: String
 	
-	for word in len(text_split)-1:
-		#print(text_split[word])
-		text_markovified[text_split[word]] = []
-		
-		for other_word in len(text_split)-1:
-			if text_split[other_word] == text_split[word]:
-				text_markovified[text_split[word]].append(text_split[other_word+1])
+	for i in range(len(source)):
+		#print(source[i])
+		model[source[i]] = []
+
+	for i in range(len(source)):
+		if source[i] != source[-1]:
+			next_word = source[i + 1]
+		else:
+			next_word = "..."
+		#print("Next word:", next_word)
+		model[source[i]].append(next_word)
+
+	model["..."] = ["..."]
+
+	return model
 
 
 
-func create_text():
-	var random_word = text_markovified.keys().pick_random()
-	var resulting_text = ""
+func generate_text(model, length):
+	var final_result = []
+
+	var starting_word = model.keys()[randi() % model.keys().size()]
+	#print("STARTING WORD:", starting_word)
 	
+	var next_word = model[starting_word][randi() % model[starting_word].size()]
+	#print("NEXT WORD:", next_word)
+	final_result.append(starting_word)
+	final_result.append(next_word)
 	
+	for i in range(length):
+		next_word = model[next_word][randi() % model[next_word].size()]
+		#print("NEXT WORD:", next_word)
+		if next_word == "...": break
+		final_result.append(next_word)
+
+	return final_result
 
 
 
 func _ready() -> void:
-	print(text_markovified)
-	markovify_text(text_string)
+	var final_model = build_model(text_string)
+	text = " ".join(generate_text(final_model, randi_range(5,50)))
