@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cbhlalkp1o8sv"]
+
+[node name="Control" type="Control" unique_id=1826438356]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2145760190]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 450.0
+
+[node name="Control" type="Control" parent="ScrollContainer" unique_id=1468707304]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Control" unique_id=2096403498]
+layout_mode = 1
+offset_right = 800.0
+offset_bottom = 450.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/Control" unique_id=1705330571]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 450.0
+text = "All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+v
+
+All work and no play makes Jack a dull boy.
+v
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+
+All work and no play makes Jack a dull boy.All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy.
+All work and no play makes Jack a dull boy."
