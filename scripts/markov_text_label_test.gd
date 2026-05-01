@@ -3,6 +3,7 @@ extends RichTextLabel
 
 
 var seed = int(Time.get_ticks_msec())
+var doitwork = false #bool(randi_range(0,1))
 
 var prefix_name = ["FINKLE", "FAN", "GAR", "GIN", "AR", "AE", "BRUM"]
 var suffix_name = ["DORF", "DALF", "FIELD", "BAL"]
@@ -39,11 +40,12 @@ func build_model(source):
 
 
 
-func generate_text(model, length):
+func generate_text(model, length, startwithlastword=false):
 	var final_result = []
 
 	var starting_word = model.keys()[randi() % model.keys().size()]
 	#print("STARTING WORD:", starting_word)
+	if startwithlastword == true: starting_word = get_parsed_text().split(" ")[-1]
 	
 	var next_word = model[starting_word][randi() % model[starting_word].size()]
 	#print("NEXT WORD:", next_word)
@@ -53,9 +55,10 @@ func generate_text(model, length):
 	for i in range(length):
 		next_word = model[next_word][randi() % model[next_word].size()]
 		#print("NEXT WORD:", next_word)
-		if next_word == "...": break
+		if next_word == "": next_word = model.keys().pick_random()
 		final_result.append(next_word)
-
+	
+	final_result.pop_front()
 	return final_result
 
 
@@ -90,6 +93,6 @@ func regenerate() -> void:
 	
 	var additional_model = build_model(get_parsed_text())
 	current_model.merge(additional_model)
-	text = text + " [color=orange]" + " ".join(generate_text(current_model, randi_range(10,20))) + "[/color]"
+	text = text + " [color=orange]" + " ".join(generate_text(current_model, randi_range(10,20), doitwork)) + "[/color]"
 	text = text.replace("%NAME%", characters.pick_random())
 	#print(seed)
