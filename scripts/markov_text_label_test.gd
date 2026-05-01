@@ -7,7 +7,7 @@ var text_string = FileAccess.get_file_as_string("texts/sample.txt")
 
 
 func build_model(source):
-	source = source.split(" ")
+	source = source.replace(" ", "|").replace("\n", "|").split("|")
 	var model = {}
 	var next_word: String
 	
