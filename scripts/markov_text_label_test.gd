@@ -8,7 +8,9 @@ var doitwork = false #bool(randi_range(0,1))
 var prefix_name = ["FINKLE", "FAN", "GAR", "GIN", "AR", "AE", "BRUM"]
 var suffix_name = ["DORF", "DALF", "FIELD", "BAL"]
 
-var text_string = FileAccess.get_file_as_string("texts/alice_in_wonderland.txt").to_upper()
+var files = ["alice_in_wonderland.txt", "frankenstein.txt"]
+
+var text_string = FileAccess.get_file_as_string("texts/" + files.pick_random()).to_upper()
 @export var user_input: Control
 
 var current_model
