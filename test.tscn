@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cbhlalkp1o8sv"]
 
+[ext_resource type="Script" uid="uid://bm3s204sli2oa" path="res://scripts/markov_text_label_test.gd" id="1_37kl0"]
+
 [node name="Control" type="Control" unique_id=1826438356]
 layout_mode = 3
 anchors_preset = 15
@@ -25,36 +27,5 @@ offset_bottom = 450.0
 layout_mode = 0
 offset_right = 800.0
 offset_bottom = 450.0
-text = "All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-v
-
-All work and no play makes Jack a dull boy.
-v
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-
-All work and no play makes Jack a dull boy.All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy."
+text = "I guess we're doing Markov chains now"
+script = ExtResource("1_37kl0")

@@ -1,0 +1,4 @@
+The quick brown fox jumped over the lazy dog.
+Roses are red, violets are blue.
+An apple is very good. An orange is very bad.
+Where are the Snowdens of yesteryear?
