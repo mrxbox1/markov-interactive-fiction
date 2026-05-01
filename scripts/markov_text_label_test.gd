@@ -3,6 +3,8 @@ extends RichTextLabel
 
 
 var text_string = FileAccess.get_file_as_string("texts/sample.txt")
+@export var user_input: Control
+var current_model
 
 
 
@@ -51,5 +53,20 @@ func generate_text(model, length):
 
 
 func _ready() -> void:
-	var final_model = build_model(text_string)
-	text = " ".join(generate_text(final_model, randi_range(5,50)))
+	current_model = build_model(text_string)
+	text = " ".join(generate_text(current_model, randi_range(5,50)))
+
+
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("pull_and_peel_licorice"):
+		regenerate()
+
+
+
+func regenerate() -> void:
+	text = text + " " + user_input.text
+	
+	var additional_model = build_model(text)
+	current_model.merge(additional_model)
+	text = text + " " + " ".join(generate_text(current_model, randi_range(10,50)))

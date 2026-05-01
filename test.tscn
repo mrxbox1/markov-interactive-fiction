@@ -23,9 +23,17 @@ layout_mode = 1
 offset_right = 800.0
 offset_bottom = 450.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/Control" unique_id=1705330571]
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/Control" unique_id=1705330571 node_paths=PackedStringArray("user_input")]
 layout_mode = 0
 offset_right = 800.0
 offset_bottom = 450.0
 text = "I guess we're doing Markov chains now"
 script = ExtResource("1_37kl0")
+user_input = NodePath("../../../LineEdit")
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1490702258]
+layout_mode = 0
+offset_top = 511.0
+offset_right = 800.0
+offset_bottom = 542.0
+placeholder_text = "Write a sentence to assist the machine with writing the adventure, then press ENTER!"
