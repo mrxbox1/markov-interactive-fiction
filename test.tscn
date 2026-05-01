@@ -36,4 +36,5 @@ layout_mode = 0
 offset_top = 511.0
 offset_right = 800.0
 offset_bottom = 542.0
-placeholder_text = "Write a sentence to assist the machine with writing the adventure, then press ENTER!"
+placeholder_text = "Try to assist the machine with writing. Make sure to include a period at the end of your sentence."
+caret_blink = true
