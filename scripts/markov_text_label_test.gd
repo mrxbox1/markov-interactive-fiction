@@ -1,13 +1,15 @@
 extends RichTextLabel
+
+
+
 var seed = int(Time.get_ticks_msec())
-
-
 
 var prefix_name = ["FINKLE", "FAN", "GAR", "GIN", "AR", "AE", "BRUM"]
 var suffix_name = ["DORF", "DALF", "FIELD", "BAL"]
 
-var text_string = FileAccess.get_file_as_string("texts/sample.txt").to_upper()
+var text_string = FileAccess.get_file_as_string("texts/alice_in_wonderland.txt").to_upper()
 @export var user_input: Control
+
 var current_model
 
 var characters = []
@@ -67,7 +69,7 @@ func _ready() -> void:
 	rand_from_seed(seed)
 	
 	# let's give the player a name.
-	var intro_text = "WELCOME TO THE ADVENTURE OF [SEED " + str(seed) + "]. WE SHALL BEGIN BY GIVING THE PLAYER A NAME."
+	var intro_text = "WELCOME TO THE ADVENTURE OF [unknown]. WE SHALL BEGIN BY GIVING THE PLAYER A NAME."
 	characters.append(create_name())
 	text = intro_text + " THIS PLAYER WILL BE NAMED " + characters[0] + ". AND SO, THIS ADVENTURE SHALL BEGIN."
 	
@@ -82,10 +84,12 @@ func _input(event: InputEvent) -> void:
 
 
 func regenerate() -> void:
-	text = text + " " + user_input.text
-	text = text.to_upper()
+	text = text + " [color=green]" + user_input.text.replace("\n", "").to_upper() + "[/color]"
 	
-	var additional_model = build_model(text)
+	user_input.text = ""
+	
+	var additional_model = build_model(get_parsed_text())
 	current_model.merge(additional_model)
-	text = text + " " + " ".join(generate_text(current_model, randi_range(10,20)))
-	print(seed)
+	text = text + " [color=orange]" + " ".join(generate_text(current_model, randi_range(10,20))) + "[/color]"
+	text = text.replace("%NAME%", characters.pick_random())
+	#print(seed)

@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cbhlalkp1o8sv"]
 
+[ext_resource type="Script" uid="uid://hsu6p4ltw0af" path="res://scripts/randomize_theme.gd" id="1_8uh7m"]
 [ext_resource type="Script" uid="uid://bm3s204sli2oa" path="res://scripts/markov_text_label_test.gd" id="1_37kl0"]
+
+[sub_resource type="Theme" id="Theme_8uh7m"]
 
 [node name="Control" type="Control" unique_id=1826438356]
 layout_mode = 3
@@ -9,6 +12,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_8uh7m")
+script = ExtResource("1_8uh7m")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2145760190]
 layout_mode = 0
@@ -27,7 +32,8 @@ offset_bottom = 450.0
 layout_mode = 0
 offset_right = 800.0
 offset_bottom = 450.0
-text = "I guess we're doing Markov chains now"
+bbcode_enabled = true
+text = "[color=green]I guess we're doing Markov chains now[/color]"
 script = ExtResource("1_37kl0")
 user_input = NodePath("../../../LineEdit")
 
@@ -36,5 +42,5 @@ layout_mode = 0
 offset_top = 511.0
 offset_right = 800.0
 offset_bottom = 542.0
-placeholder_text = "Try to assist the machine with writing. Make sure to include a period at the end of your sentence."
+placeholder_text = "Try to assist the machine with writing."
 caret_blink = true
