@@ -6,6 +6,8 @@ Tools used:
 	- Pixelorama
 	- Git
 
-Texts sourced:
+Texts used (all are in the public domain):
 	- "Alice In Wonderland"
 	- "Frankenstein; or, the modern Prometheus"
+	- "The Adventures of Roderick Random"
+	- "Treasure Island"

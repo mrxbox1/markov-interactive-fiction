@@ -34,7 +34,7 @@ layout_mode = 1
 offset_right = 800.0
 offset_bottom = 450.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/Control" unique_id=1705330571 node_paths=PackedStringArray("user_input")]
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/Control" unique_id=1705330571 node_paths=PackedStringArray("user_input", "status")]
 layout_mode = 0
 offset_right = 800.0
 offset_bottom = 450.0
@@ -42,6 +42,7 @@ bbcode_enabled = true
 text = "[color=green]I guess we're doing Markov chains now[/color]"
 script = ExtResource("1_37kl0")
 user_input = NodePath("../../../LineEdit")
+status = NodePath("../../../Status")
 
 [node name="LineEdit" type="LineEdit" parent="." unique_id=1490702258]
 layout_mode = 0
@@ -50,3 +51,10 @@ offset_right = 800.0
 offset_bottom = 542.0
 placeholder_text = "Try to assist the machine with writing."
 caret_blink = true
+
+[node name="Status" type="Label" parent="." unique_id=43628629]
+layout_mode = 0
+offset_top = 458.0
+offset_right = 40.0
+offset_bottom = 481.0
+text = "FRIENDS: NONE"

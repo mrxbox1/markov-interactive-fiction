@@ -5,17 +5,39 @@ extends RichTextLabel
 var seed = int(Time.get_ticks_msec())
 var doitwork = false #bool(randi_range(0,1))
 
-var prefix_name = ["FINKLE", "FAN", "GAR", "GIN", "AR", "AE", "BRUM"]
-var suffix_name = ["DORF", "DALF", "FIELD", "BAL"]
+var prefix_name = ["FINKLE", "FAN", "GAR", "GIN", "AR", "AE", "BRUM", "INKLE", "GA", "GAN",
+					"DOO", "FIN", "GUN", "AL", "TWO", "THREE", "FOUR", "ONE", "AFTER", "AR",
+					"AM", "RAD", "GOO", "WIZ", "FUK", "FACE", "FRANKEN", "WAL", "MICH",
+					"MAR", "LU", "WAR", "WALU", "PEA", "BOW", "PO", "CU"]
+var suffix_name = ["DORF", "DALF", "FIELD", "BAL", "DERP", "DOOF", "BING", "BUS", "BERG",
+					"BONG", "THUR", "BER", "IO", "EKIT", "WER", "LOW", "HIGH", "UP", "DOWN",
+					"HAZ", "WIZ", "FUK", "FACE", "STEIN", "TER", "AEL", "IGI", "K", "CH",
+					"SER", "RAK"]
+# these deaths are purely for absurd purposes only.
+var deaths = ["IN A FIRE.", "OF TUBERCULOSIS.", "HAPPY.", "AT THE SIGHT OF NOTHING.", "TO A WEAPON.", 
+			"TO A PERSON.", "TO A CREATURE.", "IN VAIN.", "IN PAIN.", "IN SPAIN.",
+			"IN BREAD.", "FROM GLUTTONY.", "OF INCOMPETENCE.", "OF DEPRESSION.",
+			"OF FOOLISHNESS.", "OF READING.", "OF BREATHING.", "OF SUFFOCATION.",
+			"OF DRINKING.", "OF SOMETHING.", "OR SOMETHING.", "A SAILOR.",
+			"A PIRATE.", "A HERO.", "A TRAITOR.", "AN IDIOT.", "A FOOL.", "A WARRIOR.",
+			"A HORSE.", "AT BAY.", "AT SUNRISE.", "AT DAWN.", "AT MIDNIGHT.",
+			"AT A PARTY.", "AND WENT TO HEAVEN.", "AND WENT TO HELL.", "AND BECAME A GHOUL, BUT RAN AWAY.",
+			"AND DECIDED TO STOP EXISTING.", "AND MATERIALIZED INTO THIN AIR.", "TO DEATH.",
+			"INSIDE OUT.", "UPSIDE DOWN.", "WHILE DRINKING.", "WHILE DRIVING.",
+			"WHILE DRINKING AND DRIVING.", "IN DETENTION.", "TO POLICE BRUTALITY.",
+			"A DEATH.", "ALIVE.", "DEAD.", "RED.", "BLUE.", "BROKEN.", "FIXED.", "MAGICALLY."]
 
-var files = ["alice_in_wonderland.txt", "frankenstein.txt"]
+var files = ["alice_in_wonderland.txt", "frankenstein.txt",
+			"adventures_of_roderick_random.txt", "treasure_island.txt"]
 
 var text_string = FileAccess.get_file_as_string("texts/" + files.pick_random()).to_upper()
 @export var user_input: Control
+@export var status: Label
 
 var current_model
 
 var characters = []
+var luck = [randi_range(1,5), randi_range(1,5), randi_range(1,5), randi_range(1,5)]
 
 
 
@@ -98,3 +120,11 @@ func regenerate() -> void:
 	text = text + " [color=orange]" + " ".join(generate_text(current_model, randi_range(10,20), doitwork)) + "[/color]"
 	text = text.replace("%NAME%", characters.pick_random())
 	#print(seed)
+	
+	if randi_range(1, 10) in luck: 
+		characters.append(create_name())
+		text = text + ". " + characters[-1] + " JOINED THE PARTY."
+	if randi_range(6, 7) in luck:
+		text = text + ". " + characters[-1] + "DIED " + deaths.pick_random()
+	
+	status.text = "FRIENDS: " + str(characters)
