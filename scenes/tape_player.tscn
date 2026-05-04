@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://b3qkn3rfpym0v"]
+
+[ext_resource type="AudioStream" uid="uid://il5ge4o8i6je" path="res://audio/tape_1/tape_1-1.wav" id="1_m576b"]
+[ext_resource type="AudioStream" uid="uid://70kprasnvqx7" path="res://audio/tape_1/tape_1-2.wav" id="2_la184"]
+[ext_resource type="AudioStream" uid="uid://boctwwlylueoa" path="res://audio/tape_1/tape_1-3.wav" id="3_pthf2"]
+[ext_resource type="AudioStream" uid="uid://c24p41w7fl4ko" path="res://audio/tape_1/tape_1-4.wav" id="4_3wr3s"]
+[ext_resource type="AudioStream" uid="uid://c0nyeg6ylkdii" path="res://audio/tape_1/tape_1-5.wav" id="5_jhxle"]
+[ext_resource type="AudioStream" uid="uid://byx5fy5jlv4wu" path="res://audio/tape_1/tape_1-6.wav" id="6_oxixh"]
+[ext_resource type="AudioStream" uid="uid://dpimf1vhqhf28" path="res://audio/tape_1/tape_1-7.wav" id="7_87o6c"]
+[ext_resource type="AudioStream" uid="uid://n7hq38lggpr6" path="res://audio/tape_1/tape_1-8.wav" id="8_1g068"]
+[ext_resource type="AudioStream" uid="uid://bkgfhepcibbf0" path="res://audio/tape_1/tape_1-9.wav" id="9_wyc0b"]
+[ext_resource type="AudioStream" uid="uid://b4iii3p48ytje" path="res://audio/tape_1/tape_1-a.wav" id="10_in2lu"]
+[ext_resource type="AudioStream" uid="uid://dkksqsy8if3qy" path="res://audio/tape_1/tape_1-b.wav" id="11_6ykgp"]
+[ext_resource type="AudioStream" uid="uid://bpscytxjoedny" path="res://audio/tape_1/tape_1-c.wav" id="12_6j6px"]
+[ext_resource type="AudioStream" uid="uid://djli18v88e3n4" path="res://audio/tape_1/tape_1-d.wav" id="13_eg08j"]
+[ext_resource type="AudioStream" uid="uid://vhfuxmkhlwri" path="res://audio/tape_1/tape_1-e.wav" id="14_oly4o"]
+[ext_resource type="AudioStream" uid="uid://2ve5rjnqpn1k" path="res://audio/tape_1/tape_1-f.wav" id="15_bnjpg"]
+[ext_resource type="AudioStream" uid="uid://dtmgywbpaqn6s" path="res://audio/tape_1/tape_1-g.wav" id="16_76mqj"]
+[ext_resource type="AudioStream" uid="uid://cf0vx4tc00pw6" path="res://audio/tape_1/tape_1-h.wav" id="17_652wb"]
+[ext_resource type="AudioStream" uid="uid://1l0x1agiycvy" path="res://audio/tape_1/tape_1-i.wav" id="18_fchi3"]
+[ext_resource type="AudioStream" uid="uid://dtyjth5q5h73g" path="res://audio/tape_1/tape_1-j.wav" id="19_ys25p"]
+[ext_resource type="AudioStream" uid="uid://b7bhsjkbkqjxw" path="res://audio/tape_1/tape_1-k.wav" id="20_qk0r6"]
+[ext_resource type="AudioStream" uid="uid://cm0qcd7lttscf" path="res://audio/tape_1/tape_1-l.wav" id="21_3wfdq"]
+[ext_resource type="AudioStream" uid="uid://divkb23f7jgvw" path="res://audio/tape_1/tape_1-m.wav" id="22_6ok6l"]
+[ext_resource type="AudioStream" uid="uid://b5vnh3neyh1xh" path="res://audio/tape_1/tape_1-n.wav" id="23_1fdla"]
+[ext_resource type="AudioStream" uid="uid://dbo51wopo0l8v" path="res://audio/tape_1/tape_1-o.wav" id="24_arety"]
+[ext_resource type="AudioStream" uid="uid://cdwtdeqpx61gv" path="res://audio/tape_1/tape_1-p.wav" id="25_o667w"]
+
+[sub_resource type="Animation" id="Animation_dqnys"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Subtitles:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Pull and peel licorice."]
+}
+
+[sub_resource type="Animation" id="Animation_v2uax"]
+resource_name = "tape_1"
+length = 164.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Subtitles:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["", "Greetings, and welcome to Arsenic Research Laboratories!"]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("1_m576b")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_la184")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_pthf2")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_3wr3s")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_jhxle")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_oxixh")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_87o6c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_1g068")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("9_wyc0b")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_in2lu")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_6ykgp")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_6j6px")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_eg08j")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_oly4o")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_bnjpg")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_76mqj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_652wb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_fchi3")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_ys25p")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_qk0r6")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("21_3wfdq")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22_6ok6l")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23_1fdla")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("24_arety")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("25_o667w")
+}],
+"times": PackedFloat32Array(1.2333333, 5.733333, 10.433333, 21.466667, 25.033333, 34.733334, 36.566666, 38.7, 40.866665, 45.433334, 51.433334, 54.333332, 61.433334, 63.666668, 65.933334, 78.26667, 80.76667, 87.666664, 89.73333, 101.9, 104.46667, 115.566666, 134.53334, 141.1, 159.03334)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_prq15"]
+_data = {
+&"RESET": SubResource("Animation_dqnys"),
+&"tape_1": SubResource("Animation_v2uax")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1903807923]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=290140785]
+offset_right = 800.0
+offset_bottom = 600.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1820897997]
+libraries/ = SubResource("AnimationLibrary_prq15")
+autoplay = &"tape_1"
+
+[node name="Subtitles" type="RichTextLabel" parent="." unique_id=1536229852]
+offset_top = 541.0
+offset_right = 800.0
+offset_bottom = 600.0
+bbcode_enabled = true
+text = "Pull and peel licorice."
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=334354360]
