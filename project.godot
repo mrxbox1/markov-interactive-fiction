@@ -10,10 +10,15 @@ config_version=5
 
 [application]
 
-config/name="markov interactive fiction"
+config/name="M A R C O V"
+config/description="Arsenic Research Laboratories"
+config/version="020906"
 run/main_scene="uid://cbhlalkp1o8sv"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+run/max_fps=30
+boot_splash/image="uid://c4a0p5bgp5c53"
+config/icon="uid://b8x0uqog4a0ky"
+boot_splash/minimum_display_time=2000
 
 [display]
 
