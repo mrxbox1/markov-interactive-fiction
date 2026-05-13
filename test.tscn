@@ -1,7 +1,29 @@
 [gd_scene format=3 uid="uid://cbhlalkp1o8sv"]
 
+[ext_resource type="Texture2D" uid="uid://bg4sbxfut6keq" path="res://textures/dither.png" id="1_6uqi0"]
 [ext_resource type="Script" uid="uid://hsu6p4ltw0af" path="res://scripts/randomize_theme.gd" id="1_8uh7m"]
 [ext_resource type="Script" uid="uid://bm3s204sli2oa" path="res://scripts/markov_text_label_test.gd" id="1_37kl0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6uqi0"]
+texture = ExtResource("1_6uqi0")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ykrsh"]
+texture = ExtResource("1_6uqi0")
+texture_margin_left = 16.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ppyta"]
+texture = ExtResource("1_6uqi0")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="Theme" id="Theme_6uqi0"]
+LineEdit/styles/focus = SubResource("StyleBoxTexture_6uqi0")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_ykrsh")
+Panel/styles/panel = SubResource("StyleBoxTexture_ppyta")
 
 [sub_resource type="Gradient" id="Gradient_8uh7m"]
 offsets = PackedFloat32Array(0, 0.37349397, 0.9518072, 0.9578313)
@@ -24,6 +46,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_6uqi0")
 script = ExtResource("1_8uh7m")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=262498713]
@@ -59,6 +82,7 @@ offset_bottom = 450.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/Control" unique_id=1705330571 node_paths=PackedStringArray("user_input", "status")]
 layout_mode = 0
+offset_left = 2.0
 offset_right = 800.0
 offset_bottom = 450.0
 bbcode_enabled = true
