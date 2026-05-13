@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://hsu6p4ltw0af" path="res://scripts/randomize_theme.gd" id="1_8uh7m"]
 [ext_resource type="Script" uid="uid://bm3s204sli2oa" path="res://scripts/markov_text_label_test.gd" id="1_37kl0"]
 
+[sub_resource type="Gradient" id="Gradient_8uh7m"]
+offsets = PackedFloat32Array(0, 0.37349397, 0.9518072, 0.9578313)
+colors = PackedColorArray(1, 1, 1, 1, 0.20738792, 0.20738792, 0.20738792, 0.20738792, 0.044025183, 0.044025183, 0.044025183, 0.044025183, 0, 0, 0, 0)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6uqi0"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ppyta"]
+width = 800
+height = 600
+generate_mipmaps = false
+noise = SubResource("FastNoiseLite_6uqi0")
+color_ramp = SubResource("Gradient_8uh7m")
+seamless = true
+
 [node name="Control" type="Control" unique_id=1826438356]
 layout_mode = 3
 anchors_preset = 15
@@ -20,6 +34,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch_mode = 1
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=885166016]
+repeat_size = Vector2(800, 600)
+autoscroll = Vector2(5, 5)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=801605645]
+texture = SubResource("NoiseTexture2D_ppyta")
+centered = false
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2145760190]
 layout_mode = 0
