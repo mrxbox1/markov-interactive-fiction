@@ -7,6 +7,7 @@ The only font used in this project is called "Windows" and was obtained from htt
 Tools used:
 	- Pixelorama
 	- Git
+	- Online Microsoft Sam TTS Generator (https://www.tetyys.com/SAPI4/)
 
 Texts used (all are in the public domain):
 	- "Alice In Wonderland"
