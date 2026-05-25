@@ -1,5 +1,5 @@
 Made in Godot 4.6.2 for the RETURN OF THE REALLY BAD IF game jam.
-The game (except for the texts, of course) is licensed under GNU GPLv3.
+The game (except for the texts, of course) is licensed under the MIT license.
 
 Texts (under "/texts/") obtained from Project Gutenberg. Said texts are in the public domain.
 
