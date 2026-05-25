@@ -1,0 +1,26 @@
+[gd_resource type="Theme" format=3 uid="uid://dgb6fxt503ky8"]
+
+[ext_resource type="Texture2D" uid="uid://bg4sbxfut6keq" path="res://textures/dither.png" id="1_cqnxl"]
+[ext_resource type="FontFile" uid="uid://crxdr3ik5to68" path="res://w95f.woff2" id="2_2i45n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6uqi0"]
+texture = ExtResource("1_cqnxl")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ykrsh"]
+texture = ExtResource("1_cqnxl")
+texture_margin_left = 16.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ppyta"]
+texture = ExtResource("1_cqnxl")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[resource]
+default_font = ExtResource("2_2i45n")
+LineEdit/styles/focus = SubResource("StyleBoxTexture_6uqi0")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_ykrsh")
+Panel/styles/panel = SubResource("StyleBoxTexture_ppyta")

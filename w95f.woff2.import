@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://d14v0nuc8qd01"
-path="res://.godot/imported/windows.ttf-488cc6c969f0efd9504940739abbb86a.fontdata"
+uid="uid://crxdr3ik5to68"
+path="res://.godot/imported/w95f.woff2-5012e0d3364509d932ab6afc8c9eaddb.fontdata"
 
 [deps]
 
-source_file="res://windows.ttf"
-dest_files=["res://.godot/imported/windows.ttf-488cc6c969f0efd9504940739abbb86a.fontdata"]
+source_file="res://w95f.woff2"
+dest_files=["res://.godot/imported/w95f.woff2-5012e0d3364509d932ab6afc8c9eaddb.fontdata"]
 
 [params]
 

@@ -25,6 +25,7 @@
 [ext_resource type="AudioStream" uid="uid://b5vnh3neyh1xh" path="res://audio/tape_1/tape_1-n.wav" id="23_1fdla"]
 [ext_resource type="AudioStream" uid="uid://dbo51wopo0l8v" path="res://audio/tape_1/tape_1-o.wav" id="24_arety"]
 [ext_resource type="AudioStream" uid="uid://cdwtdeqpx61gv" path="res://audio/tape_1/tape_1-p.wav" id="25_o667w"]
+[ext_resource type="Theme" uid="uid://dgb6fxt503ky8" path="res://scenes/default_theme.tres" id="26_la184"]
 
 [sub_resource type="Animation" id="Animation_dqnys"]
 length = 0.001
@@ -189,6 +190,7 @@ autoplay = &"tape_1"
 offset_top = 520.0
 offset_right = 800.0
 offset_bottom = 600.0
+theme = ExtResource("26_la184")
 bbcode_enabled = true
 text = "Pull and peel licorice."
 horizontal_alignment = 1
