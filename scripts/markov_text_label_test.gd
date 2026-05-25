@@ -3,7 +3,6 @@ extends RichTextLabel
 
 
 var seed = int(Time.get_ticks_msec())
-var doitwork = false #bool(randi_range(0,1))
 
 var prefix_name = ["FINKLE", "FAN", "GAR", "GIN", "AR", "AE", "BRUM", "INKLE", "GA", "GAN",
 					"DOO", "FIN", "GUN", "AL", "TWO", "THREE", "FOUR", "ONE", "AFTER", "AR",
@@ -117,7 +116,7 @@ func regenerate() -> void:
 	
 	var additional_model = build_model(get_parsed_text())
 	current_model.merge(additional_model)
-	text = text + " [color=orange]" + " ".join(generate_text(current_model, randi_range(10,20), doitwork)) + "[/color]"
+	text = text + " [color=orange]" + " ".join(generate_text(current_model, randi_range(10,20))) + "[/color]"
 	text = text.replace("%NAME%", characters.pick_random())
 	#print(seed)
 	
